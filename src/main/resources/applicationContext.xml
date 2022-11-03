@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 기존 : Root Context -->
+	<!-- 역할 : JSP와 관련이 없는 객체를 설정하는 파일
+				back-end와 관련된 설정들을 담당한다. ex) Service, DAO -->
+				
+	<!-- DataSource 설정하기 -->
+	
+	
+	<!-- Mybatis를 Spring에 연동 -->
+				
+</beans>
