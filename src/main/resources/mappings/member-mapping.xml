@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberDAO">
+	<!-- 회원가입 : insert -->
+	<insert id="insertMember">
+		INSERT INTO MEMBER VALUES(#{mid}, #{mpw}, #{mname}, #{mbirth}, #{memail}, #{mphone}, #{madd}, #{mrole}) 
+	</insert>
+	<!-- 회원정보젼경 : update -->
+	<update id="updateMember">
+		UPDATE MEMBER SET MPW=#{mpw}, MNAME=#{mname}, MEMAIL=#{memail}, MPHONE=#{mphone}, MADD=#{madd} WHERE MID=#{mid}
+	</update>
+	<!-- 회원탈퇴 : delete -->
+	<delete id="deleteMember">
+		DELETE MEMBER WHERE MID=#{mid} AND MPW=#{mpw}
+	</delete>
+	<!-- 로그인 : selectOne -->
+	<select id="selectOneMember">
+		SELECT * FROM MEMER WHERE MID=#{mid} AND MPW=#{mpw}
+	</select>
+	<!-- 회원목록 : selectALll -->
+	<select id="selectAllMember">
+		SELECT * FROM MEMBER;
+	</select>
+</mapper>

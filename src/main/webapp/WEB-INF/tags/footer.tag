@@ -1,4 +1,6 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="css/templatemo.css">
+
  <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
@@ -41,10 +43,9 @@
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
                         <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
                         <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none" href="login.jsp">Login</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>

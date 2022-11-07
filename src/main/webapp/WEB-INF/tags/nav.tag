@@ -1,5 +1,6 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+<link rel="stylesheet" href="css/nav.css">
+    <nav class="navbar navbar-expand-lg navbar-light shadow nav-Header">
         <div class="container d-flex justify-content-between align-items-center">
 
             <a href="main.jsp">
@@ -23,7 +24,7 @@
                             <a class="nav-link" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="login.jsp">Login</a>
                         </li>
                     </ul>
                 </div>

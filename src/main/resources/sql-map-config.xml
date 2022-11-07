@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 데이터가 null로 전달이 되었으면 빈칸으로 인지하지말고 null로 인식하라는 설정 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	
+	<!-- type에 적힌 것을 "member"라고 부르겠어!!!라는 설정 -->
+	<!-- 별칭(Alias) 설정 -->
+	<typeAliases>
+		<typeAlias type="com.yim.biz.member.MemberDTO" alias="member"/>
+		<!-- <typeAlias type="com.yim.biz.product.ProductDTO" alias="product"/> -->
+	</typeAliases>
+	
+	<!-- DB에 사용되는 쿼리문들을 담은 mapper파일을 등록하는 부분 -->
+	<mappers>
+		<mapper resource="mappings/member-mapping.xml"/>
+		<!-- <mapper resource="mappings/product-mapping.xml"/> -->
+	</mappers>
+</configuration>

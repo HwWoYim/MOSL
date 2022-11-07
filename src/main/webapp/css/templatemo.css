@@ -154,6 +154,10 @@ body, ul, li, p, a, label, input, div {
   transition: .5s;
 }
 #tempaltemo_footer .border-light { border-color: #2d343f !important;}
+#tempaltemo_footer{
+	bottom: 0;
+	width: 100%;
+}
 /*
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
