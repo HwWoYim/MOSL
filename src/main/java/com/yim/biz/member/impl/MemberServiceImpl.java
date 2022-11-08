@@ -2,11 +2,16 @@ package com.yim.biz.member.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.yim.biz.member.MemberDTO;
 import com.yim.biz.member.MemberService;
 
+@Service("memberService")
 public class MemberServiceImpl implements MemberService{
 	
+	@Autowired
 	private MemberDAO memberDAO;
 
 	@Override
