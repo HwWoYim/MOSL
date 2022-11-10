@@ -35,9 +35,16 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
+	public MemberDTO selectOneCheck(MemberDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
 	public List<MemberDTO> selectAllMember(MemberDTO dto) {
 		return memberDAO.selectAllMember(dto);
 	}
+
 	
 	
 }

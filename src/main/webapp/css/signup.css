@@ -35,3 +35,7 @@
 #signupButton:focus{
 	outline: none;
 }
+/* 이용약관동의 체크박스 */
+#signupCheckBox{
+	margin-bottom: 20px;
+}

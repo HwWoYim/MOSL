@@ -8,15 +8,19 @@
 	</insert>
 	<!-- 회원정보젼경 : update -->
 	<update id="updateMember">
-		UPDATE MEMBER SET MPW=#{mpw}, MNAME=#{mname}, MEMAIL=#{memail}, MPHONE=#{mphone}, MADD=#{madd} WHERE MID=#{mid}
+		UPDATE MEMBER SET MPW=#{mpw}, MNAME=#{mname}, MBIRTH=#{mbirth}, MEMAIL=#{memail}, MPHONE=#{mphone}, MADD=#{madd}, MROLE=#{mrole} WHERE MID=#{mid}
 	</update>
 	<!-- 회원탈퇴 : delete -->
 	<delete id="deleteMember">
-		DELETE MEMBER WHERE MID=#{mid} AND MPW=#{mpw}
+		DELETE FROM MEMBER WHERE MID=#{mid} AND MPW=#{mpw}
 	</delete>
 	<!-- 로그인 : selectOne -->
 	<select id="selectOneMember" resultType="member">
 		SELECT * FROM MEMBER WHERE MID=#{mid} AND MPW=#{mpw}
+	</select>
+	<!-- 마이페이지 진입시 로그인 아이디로만 사용자 검색 -->
+	<select id="selectOneCheck" resultType="member">
+		SELECT * FROM MEMBER WHERE MID=#{mid} AND MNAME=#{mname}
 	</select>
 	<!-- 회원목록 : selectALll -->
 	<select id="selectAllMember" resultType="member">

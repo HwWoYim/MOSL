@@ -32,6 +32,10 @@ public class MemberDAO {
 		return mybatis.selectOne("MemberDAO.selectOneMember", dto);
 	}
 	
+	public MemberDTO selectOneCheck(MemberDTO dto) {
+		return mybatis.selectOne("MemberDAO.selectOneCheck", dto);
+	}
+	
 	public List<MemberDTO> selectAllMember(MemberDTO dto){
 		return mybatis.selectList("MemberDAO.selectAllMember", dto);
 	}

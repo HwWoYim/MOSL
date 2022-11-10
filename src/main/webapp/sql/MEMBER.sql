@@ -10,5 +10,8 @@ CREATE TABLE MEMBER(
 );
 DROP TABLE MEMBER;
 SELECT * FROM MEMBER;
+SELECT * FROM MEMBER WHERE MID='admin' AND MNAME='yim';
 
 INSERT INTO MEMBER VALUES('admin', '1111111111111', 'yim', '19960413', 'yimhw77@naver.com', '010-9702-0992', '서울 중구', '관리자');
+INSERT INTO MEMBER VALUES('admin1', '1111111111111', 'yim', '19960413', 'yimhw77@naver.com', '010-9702-0992', '서울 중구', '관리자');
+INSERT INTO MEMBER VALUES('admin2', '1111111111111', 'yim', '19960413', 'yimhw77@naver.com', '010-9702-0992', '서울 중구', '관리자');

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*-----------------회원정보 변경-------------------*/
+/* 정보변경 불가 항목들(아이디, 생일) */
+.updateReadonly{
+	pointer-events: none;
+}
+
+/* 회원 탈퇴 번튼 */
+#deleteMemberBTN{
+	width: 100%;
+    height: 45px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: lightcoral;
+    margin-top: 15px;
+}

@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow nav-Header">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a href="main.jsp">
+            <a href="main.do">
             	<img alt="로고" src="img/MOSL.png">
             </a>
 
@@ -18,7 +18,7 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="main.do">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
@@ -28,11 +28,11 @@
                         </li>
                         <li class="nav-item">
                         	<c:choose>
-                            	<c:when test="${userID==null}">
-                            		<a class="nav-link" href="login.jsp">Login</a>
+                            	<c:when test="${member==null}">
+                            		<a class="nav-link" href="login.do">Login</a>
                             	</c:when>
                             	<c:otherwise>
-                            		<a class="nav-link" href="login.jsp">Logout</a>
+                            		<a class="nav-link" href="logout.do">Logout</a>
                             	</c:otherwise>
                            	</c:choose>
                         </li>
@@ -54,9 +54,9 @@
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a> -->
-                    <c:if test="${userID!=null}">
-                    	<a id="userID">
-                    		<span>${userID} 님</span>
+                    <c:if test="${member!=null}">
+                    	<a id="userID" href="mypage.do">
+                    		<span>${member.mid} 님</span>
                     	</a>
                     </c:if>
                     <!-- <a class="nav-icon position-relative text-decoration-none" href="#">

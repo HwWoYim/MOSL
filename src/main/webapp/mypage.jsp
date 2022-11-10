@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-<title>MOSL-signup</title>
+<title>MOSL-mypage</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,6 +32,7 @@
 	crossorigin="" />
 <link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/mypage.css">
 </head>
 
 <body>
@@ -65,38 +66,40 @@
 
 	<!-- 중간 div영역 시작 -->
 	<h1 id="loginH1">
-		<span>회</span>
-		<span>원</span>
-		<span>가</span>
-		<span>입</span>
+		<span>마</span>
+		<span>이</span>
+		<span>페</span>
+		<span>이</span>
+		<span>지</span>
 	</h1>
 	<div id="LoginMainDivBox">
 		<div id="LoginBox">
-			<form name="login" id="loginForm" action="signup.do" method="post">
-				<input name="mid" type="text" id="idInput" class="signupInput" placeholder="아이디"	autocomplete="off"  required/>
+			<form name="mypage" id="updateForm" action="update.do" method="post">
+				<input name="mid" type="text" id="idInput" class="signupInput updateReadonly" value="${member.mid}" readonly/>
 				<div id="checkID" class="checkMSG">
-					<p>영문 대/소문자,숫자로 이루어진<br>최소7자리 최대15자리만 생성 가능</p>
+					<p>영문 대/소문자,숫자로 이루어진<br>최소7자리 최대15자리로 변경 가능</p>
 				</div> 
-				<input name="mpw" type="password" id="pwInput" class="signupInput"  placeholder="비밀번호" autocomplete="off" required/>
+				<input name="mpw" type="password" id="pwInput" class="signupInput"  value="${member.mpw}" autocomplete="off" required/>
 				<div id="firstCheckPW" class="checkMSG">
-					<p>비밀번호는 12자리 이상 입력해주세요!</p>
+					<p>비밀번호는 12자리 이상으로 변경해주세요!</p>
 				</div>
-				<input name="checkPW" type="password" id="checkPWInput" class="signupInput"  placeholder="비밀번호 확인" autocomplete="off" required/>
+				<input name="checkPW" type="password" id="checkPWInput" class="signupInput"  value="${member.mpw}" autocomplete="off" required/>
 				<div id="checkPW" class="checkMSG">
 					<p>일치합니다.</p>
 				</div>
-				<input name="mname" type="text" id="nameInput" class="signupInput"  placeholder="본인 이름" autocomplete="off" required/>
+				<input name="mname" type="text" id="nameInput" class="signupInput"  value="${member.mname}" autocomplete="off" required/>
 				<div id="checkName" class="checkMSG">
 					<p>한국이름 - 2~5글자<br>영어이름 - 2~10(띄어쓰기 가능, first/last name)</p>
 				</div>
-				<input name="mbirth" type="text" id="birthInput" class="signupInput"  placeholder="생년월일 6자리 ex) 960101" autocomplete="off" required/>
-				<input name="memail" type="text" id="emailInput" class="signupInput"  placeholder="이메일" autocomplete="off" required/>
-				<input name="mphone" type="text" id="phoneInput" class="signupInput"  placeholder="전화번호" autocomplete="off" required/>
-				<input name="madd" type="text" id="addInput" class="signupInput"  placeholder="주소" autocomplete="off" required/>
-				<input name="mrole" type="hidden" id="roleInput" class="signupInput" value="normal">
-				<label><input type="checkbox" id="signupCheckBox" value="이용약관 동의" required>이용약관 동의</label>
-				<button type="submit" id="signupButton" disabled>회원가입 하기</button>
-				
+				<input name="mbirth" type="text" id="birthInput" class="signupInput updateReadonly"  value="${member.mbirth}" readonly/>
+				<input name="memail" type="text" id="emailInput" class="signupInput"  value="${member.memail}" required/>
+				<input name="mphone" type="text" id="phoneInput" class="signupInput"  value="${member.mphone }" required/>
+				<input name="madd" type="text" id="addInput" class="signupInput"  value="${member.madd }" required/>
+				<label><input type="checkbox" id="signupCheckBox" value="이용약관 동의" required>변경사항 동의</label>
+				<button type="submit" id="signupButton" disabled>정보변경하기</button>
+			</form>
+			<form name="deleteMypage" id="deleteForm" action="delete.do" method="post">
+				<button type="submit" id="deleteMemberBTN">회원탈퇴</button>
 			</form>
 		</div>
 	</div>
@@ -114,6 +117,7 @@
 	<script src="js/templatemo.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/signup.js"></script>
+	<script src="js/mypage.js"></script>
 	<!-- End Script -->
 </body>
 

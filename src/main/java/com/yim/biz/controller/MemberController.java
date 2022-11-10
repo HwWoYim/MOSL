@@ -28,12 +28,11 @@ public class MemberController {
 	@RequestMapping(value="/login.do", method= RequestMethod.POST)
 	public String selectOneMember(MemberDTO mDTO, Model model, HttpSession session) {
 		mDTO = memberService.selectOneMember(mDTO);
-		session.setAttribute("user", mDTO);
+		System.out.println("첫 번 째 회원정보 : " + mDTO);
 		if(mDTO == null) {
-			return "login.jsp";
+			return "redirect:login.jsp";
 		} else {
-			model.addAttribute("userID", mDTO.getMid());
-			model.addAttribute("mrole", mDTO.getMrole());
+			session.setAttribute("member", mDTO);
 			return "main.do";
 		}
 	}
@@ -45,17 +44,40 @@ public class MemberController {
 		return "redirect:main.do";
 	}
 	
+	
+	// 회원가입 페이지로의 이동
+	@RequestMapping(value="/signup.do", method = RequestMethod.GET)
+	public String signup() {
+		return "signup.jsp";
+	}
+	// 회원가입 수행
+	@RequestMapping(value="/signup.do", method = RequestMethod.POST)
+	public String signup(MemberDTO mDTO) {
+		memberService.insertMember(mDTO);
+		return "redirect:login.do";
+	}
+	
+	// 회원 정보출력
+	@RequestMapping("/mypage.do")
+	public String mypageselectOne(@ModelAttribute("member")MemberDTO mDTO, Model model, HttpSession session) {
+		mDTO = memberService.selectOneMember(mDTO);
+		System.out.println("회원정보 : " + mDTO);
+		return "mypage.jsp";
+	}
+	
 	// 회원정보변경
-	@RequestMapping("/update.do")
+	@RequestMapping(value="/update.do", method = RequestMethod.POST)
 	public String updateMember(@ModelAttribute("member")MemberDTO mDTO, Model model) {
+		System.out.println("업데이트 : " + mDTO);
 		memberService.updateMember(mDTO);
 		return "main.do";
 	}
 	
 	// 회원 탈퇴
-	@RequestMapping("/delete.do")
-	public String deleteMember(@ModelAttribute("member")MemberDTO mDTO, HttpSession session) {
+	@RequestMapping(value="/delete.do", method = RequestMethod.POST)
+	public String deleteMember(@ModelAttribute("member")MemberDTO mDTO, Model model, SessionStatus sessionStatus) {
 		memberService.deleteMember(mDTO);
-		return "main.do";
+		sessionStatus.setComplete();
+		return "redirect:main.do";
 	}
 }
