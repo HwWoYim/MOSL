@@ -11,12 +11,14 @@
 	<!-- 별칭(Alias) 설정 -->
 	<typeAliases>
 		<typeAlias type="com.yim.biz.member.MemberDTO" alias="member"/>
+		<typeAlias type="com.yim.biz.board.BoardDTO" alias="board"/>
 		<!-- <typeAlias type="com.yim.biz.product.ProductDTO" alias="product"/> -->
 	</typeAliases>
 	
 	<!-- DB에 사용되는 쿼리문들을 담은 mapper파일을 등록하는 부분 -->
 	<mappers>
 		<mapper resource="mappings/member-mapping.xml"/>
+		<mapper resource="mappings/board-mapping.xml"/>
 		<!-- <mapper resource="mappings/product-mapping.xml"/> -->
 	</mappers>
 </configuration>

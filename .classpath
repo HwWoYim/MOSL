@@ -62,5 +62,6 @@
 	<classpathentry kind="lib" path="C:/0607_YIM/resource/jar파일/JSTL resource/jstl.jar"/>
 	<classpathentry kind="lib" path="C:/0607_YIM/resource/jar파일/JSTL resource/standard.jar"/>
 	<classpathentry kind="lib" path="C:/0607_YIM/resource/jar파일/크롤링/jsoup-1.14.3.jar"/>
+	<classpathentry kind="lib" path="C:/0607_YIM/resource/jar파일/lombok.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+	
+	<!-- <resultMap type="board" id="boardResult">
+		<id property="bnum" column="BNUM"/>
+		<result property="btitle" column="BTITLE"/>
+		<result property="bcontent" column="BCONTENT"/>
+		<result property="bwriter" column="BWRITER"/>
+		<result property="bdate" column="BDATE"/>
+		<result property="cnt" column="CNT"/>
+		<result property="gcnt" column="GCNT"/>
+		<result property="bcnt" column="BCNT"/>
+	</resultMap> -->
+	
+	<!-- 글 추가하기 : insert -->
+	<insert id="insertBoard">
+		INSERT INTO BOARD VALUES(${BNUM}, ${btitle}, ${bcontent}, ${bwriter}, ${bdate});
+	</insert>
+	
+	<!-- 글 목록 보기 -->
+	<select id="selectAllBoard" resultType="board">
+		SELECT * FROM BOARD;
+	</select>
+
+
+</mapper>

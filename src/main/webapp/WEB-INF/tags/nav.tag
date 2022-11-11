@@ -21,7 +21,7 @@
                             <a class="nav-link" href="main.do">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="board.do">Board</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="shop.html">Shop</a>
