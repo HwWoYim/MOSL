@@ -55,6 +55,7 @@
 	<!-- Start Banner Hero -->
 	<div id="boardMainBox">
 		<div id="boardheader">
+			<p><a href="boardWrite.jsp">글 쓰기</a></p>
 			<table>
 				<thead>
 					<tr>
@@ -67,9 +68,9 @@
 				<tbody>
 					<c:forEach var="board" items="${datas}">
 						<tr>
-							<td>${board.bnum}</td>
-							<td>${board.btitle}</td>
-							<td>${board.bwriter}</td>
+							<td><a href="boardDetail.do?bnum=${board.bnum}">${board.bnum}</a></td>
+							<td><a href="boardDetail.do?bnum=${board.bnum}">${board.btitle}</a></td>
+							<td><a href="boardDetail.do?bnum=${board.bnum}">${board.bwriter}</a></td>
 							<td>${board.bdate}</td>
 						</tr>
 					</c:forEach>

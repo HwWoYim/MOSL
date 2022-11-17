@@ -9,17 +9,58 @@
 
 #boardheader{
 	width: 80%;
-	hegiht: 300px;
+	hegiht: auto;
 	box-shadow: 10px 10px 20px 0 grey;
 	margin: 50px;
 }
 
+/* 게시판 글 목록 표*/
+#boardheader > table > tr > th, td{
+	border: 1px solid black;
+	padding: 10px;
+	border-left: none;
+	border-right: none;
+}
 
+#boardheader > table > tr > th, td > a{
+	text-decoration-line: none;
+	color: black;
+}
 
+#boardheader > table{
+	width: 95%;
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+}
 
+/* 글쓰기 버튼 */
+#boardheader > p > a{
+	color: black;
+	text-decoration-line: none;
+	font-weight: bold !important;
+}
 
+#boardheader > p{
+	text-align: right;
+	width: 97%;
+	margin-top: 15px;
+}
 
+/*--------------boardWrite.jsp------------------*/
+#boardWriteMainBox{
+	width: 100%;
+	heigth: 500px;
+	justify-content: center;
+	display: flex;
+}
 
+#boardWriteHeader{
+	width: 80%;
+	height: 500px;
+	box-shadow: 10px 10px 20px 0 grey;
+	margin: 50px;
+}
 
 
 
